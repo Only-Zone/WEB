@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toolContentDiv.innerHTML = ""; // 清空内容
 
         // 使用GitHub API获取Toolfolder文件夹内容
-        fetch('https://api.github.com/repos/your-username/your-repository/contents/Toolfolder')
+        fetch('https://api.github.com/repos/Only-Zone/WEB/contents/Toolfolder')
             .then(response => response.json())
             .then(data => {
                 data.forEach(file => {
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         postListContainer.innerHTML = ""; // 清空内容
 
         // 使用GitHub API获取Posts文件夹内容
-        fetch('https://api.github.com/repos/your-username/your-repository/contents/Posts')
+        fetch('https://api.github.com/repos/Only-Zone/WEB/contents/Posts')
             .then(response => response.json())
             .then(data => {
                 data.forEach(file => {
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const hash = window.location.hash;
         if (hash.startsWith("#articleContent?post=")) {
             const postFileName = hash.substring(23);
-            fetch(`https://raw.githubusercontent.com/your-username/your-repository/main/Posts/${postFileName}`)
+            fetch(`https://raw.githubusercontent.com/Only-Zone/WEB/main/Posts/${postFileName}`)
                 .then(response => response.json())
                 .then(postData => {
                     document.getElementById("articleTitle").textContent = postData.title;
